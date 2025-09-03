@@ -30,9 +30,11 @@ SECRET_KEY = 'django-insecure-+aj7+1qgauwu9k7cv9^!d*6i#2b5#2u-og_k887bg2_f4p1x%u
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"], "chevinka-queen-footballnews.pbp.cs.ui.ac.id"
-
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "chevinka-queen-footballnews.pbp.cs.ui.ac.id",
+]
 
 # Application definition
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
 ]
 
 MIDDLEWARE = [
