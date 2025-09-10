@@ -37,7 +37,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://chevinka-queen-footballshop.pbp.cs.ui.ac.id"
+    "https://chevinka-queen-footballnews.pbp.cs.ui.ac.id"
 ]
 
 # Application definition
