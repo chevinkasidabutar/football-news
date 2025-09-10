@@ -36,6 +36,10 @@ ALLOWED_HOSTS = [
     "chevinka-queen-footballnews.pbp.cs.ui.ac.id",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://chevinka-queen-footballshop.pbp.cs.ui.ac.id"
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -63,10 +67,11 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Pastikan ini ada jika template di luar aplikasi
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -74,6 +79,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'football_news.wsgi.application'
 
