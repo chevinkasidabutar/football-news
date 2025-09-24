@@ -149,6 +149,7 @@ class FootballNewsFunctionalTest(LiveServerTestCase):
 
         wait = WebDriverWait(self.browser, 1000)
 
+
         # Go to create news page
         add_button = self.browser.find_element(By.PARTIAL_LINK_TEXT, "Add News")
         add_button.click()
